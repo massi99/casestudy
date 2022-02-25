@@ -1,0 +1,26 @@
+<section class="mainapp">
+  <app-timer-display [count]="counter"></app-timer-display>
+  <div class="tOperate">
+    <div style="margin: 50px 0px 10px 50px">
+      <label for="timerValue">Enter timer limit:</label>
+      <input
+        type="number"
+        id="timerValue"
+        min="0"
+        [(ngModel)]="initialCountLimit"
+        [disabled]="this.isCounterActive"
+      />
+    </div>
+    <div style="margin: 20px 0px 0px 300px">
+      <button style="margin-right: 5px" (click)="counterStartPause()">
+        Start/Pause
+      </button>
+      <button (click)="counterReset()">Reset</button>
+    </div>
+  </div>
+  <app-timer-log [startTime]="startedTime" [pauseTime]="pausedTime">
+  </app-timer-log>
+
+  <app-timer-count [started]="startCount" [paused]="pausedCount">
+  </app-timer-count>
+</section>

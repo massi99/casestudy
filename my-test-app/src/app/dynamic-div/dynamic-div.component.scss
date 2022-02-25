@@ -1,0 +1,22 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  margin: 10px;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  display: block;
+  height: 100%;
+}
+.divSection {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 800px;
+  overflow-y: scroll;
+}

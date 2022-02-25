@@ -1,0 +1,6 @@
+<section class="log">
+  <div>
+    <div *ngIf="_startTime">started at {{ _startTime | date: "medium" }}</div>
+    <div *ngIf="_pauseTime">paused at {{ _pauseTime | date: "medium" }}</div>
+  </div>
+</section>

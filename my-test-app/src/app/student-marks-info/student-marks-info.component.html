@@ -1,0 +1,37 @@
+<section style="margin-top: 50px">
+  <div class="container">
+    <table class="table table-bordered" id="table">
+      <thead>
+        <tr>
+          <th
+            *ngFor="let h of headingInfoMap.values(); let i = index"
+            class="header"
+            (click)="sort(i)"
+          >
+            {{ h }}
+            <ng-container>
+              <i
+                class="bi bi-caret-up-fill"
+                *ngIf="currentOrder === 'normal' || currentOrder !== 'desc'"
+              ></i>
+              <i
+                class="bi bi-caret-down-fill"
+                *ngIf="currentOrder === 'normal' || currentOrder !== 'asc'"
+              ></i>
+            </ng-container>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of tempMarksInfo">
+          <td>{{ student.name }}</td>
+          <td>{{ student.class }}</td>
+          <td>{{ student.section }}</td>
+          <td>{{ student.sub1 }}</td>
+          <td>{{ student.sub2 }}</td>
+          <td>{{ student.sub3 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

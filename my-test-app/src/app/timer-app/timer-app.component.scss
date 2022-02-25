@@ -1,0 +1,17 @@
+.mainapp {
+  height: 600px;
+  width: 80%;
+  border: 2px solid rgb(39, 15, 15);
+  position: fixed;
+  margin: 100px 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tOperate {
+  margin: 20px;
+  width: 50%;
+  height: 300px;
+  border: 1px solid darkblue;
+  flex-grow: 2;
+  font-size: 2em;
+}
